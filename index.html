@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <div class="captcha-container">
+        <div class="header">Tasks</div>
+    
+        <div class="securityCode">
+            <p id="code"></p>
+            <div class="icons">
+                <span class="readText">
+                    <i class="fas fa-headphones"></i>
+                </span>
+                <span class="changeText">
+                    <i class="fas fa-sync-alt"></i>
+                </span>
+             </div>
+        </div>
+        <div class="userInput">
+            <input type="text" placeholder="보안문자" >
+            <button type="submit" class="btn">Submit</button>
+        </div>
+    </div>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="./script.js"></script>
+
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1A1D2B;
+}
+
+.captcha-container {
+  min-width: 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  font-family: 'poppins' , sans-serif;
+}
+
+.header {
+  background: #037AE2;
+  color: linear-gradient(#12c2e9, #c471ed, #f64f59);
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  padding: 15px;
+}
+
+.securityCode {
+  width: 100%;
+  height: 250px;
+  background: url("../images/blueBg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+ .securityCode p {
+  text-align: center;
+  line-height: 250px;
+  color: #black;
+  font-family: "Montserrat";
+  font-size: 5vw;
+  font-weight: bold;
+  letter-spacing: 10px;
+  user-select: none;
+}
+
+.securityCode .icons {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+.securityCode .icons .fas {
+  font-size: 1.5rem;
+  color: black;
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+ .securityCode .icons .fas:hover {
+  color: #037AE2;
+}
+
+ .userInput {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+ .userInput input {
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  border: 1px solid gray;
+  border-right: none;
+  padding: 12px;
+  width: 60%;
+  font-size: 1.2rem;
+}
+
+ .btn {
+  border: none;
+  outline: none;
+  background: #037AE2;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+ .btn:hover {
+  background: #036cc9;
+}
+</style>
+</body>
+</html>
